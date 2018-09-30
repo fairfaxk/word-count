@@ -100,8 +100,8 @@ int main ( int argc, char *argv[]) {
 
 	if(numOfFiles<1){
 		//IF TEHRE ARE NO OPTIONS USE STDIN
-		file = fopen(stdin, "r");
-		readFile(file, "");
+		//file = fopen(stdin, "r");
+		//readFile(file, "");
 	}
 	else{
 		//Loop through each file
@@ -110,8 +110,8 @@ int main ( int argc, char *argv[]) {
 			if(filename=="-"){
 				//USE STDIN IF IT IS A DASH
 				//Open the file. If it can't be opened print an error
-                                file = fopen(stdin, "r");
-                                readFile(file, filename);
+                                //file = fopen(stdin, "r");
+                                //readFile(file, filename);
 
 			}
 			else{
@@ -123,9 +123,19 @@ int main ( int argc, char *argv[]) {
 				fclose(file);
 			}	
 		}
+		if(numOfFiles>1){
+			if(l){
+				printf("\t%d", totalLines);
+			}
+			if(w){
+				printf("\t%d", totalWords);
+			}
+			if(c){
+				printf("\t%d", totalChars);
+			}
+			printf("\ttotal\n");
+		}
 	}
-	//close file when we're done with it
-        fclose(file);
 
 	return(0);
 }
