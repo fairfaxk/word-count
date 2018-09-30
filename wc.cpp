@@ -101,7 +101,7 @@ int main ( int argc, char *argv[]) {
 	if(numOfFiles<1){
 		//IF TEHRE ARE NO OPTIONS USE STDIN
 		//file = fopen(stdin, "r");
-		//readFile(file, "");
+		readFile(stdin, "");
 	}
 	else{
 		//Loop through each file
@@ -111,7 +111,7 @@ int main ( int argc, char *argv[]) {
 				//USE STDIN IF IT IS A DASH
 				//Open the file. If it can't be opened print an error
                                 //file = fopen(stdin, "r");
-                                //readFile(file, filename);
+                                readFile(stdin, filename);
 
 			}
 			else{
